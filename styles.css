@@ -6,11 +6,11 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 .navBar-item { display: inline-block; padding: 0; margin: 0}
 #searchBar-holder { height: inherit; padding-top: 1px; padding-bottom: 1px}
 #searchBar { height: 100%; width: 40vw; background-color: white; padding-left: 20px; padding-right:20px; border-radius: 5vh; position:relative;}
-#searchBar > input { position: absolute; height: 100%; width: 35vw; padding: 0; border: none; font-size: 1em;}
-#searchBar > input:focus { position: absolute; height: 100%; width: 35vw; padding: 0; border: none; font-size: 1em; outline: none;}
-#searchBar > button { position: absolute; height: 100%; right: 20px; border: none; background-color: white; color: grey}
-#searchBar > button:hover { position: absolute; height: 100%; right: 20px; border: none; background-color: white; color: red}
-#searchBar > button:focus { position: absolute; height: 100%; right: 20px; border: none; background-color: white; color: grey; outline: none;}
+#searchBar > input { position: absolute; height: 95%; width: 35vw; padding: 0; border: none; font-size: 1em;}
+#searchBar > input:focus { outline: none;}
+#searchBar > button { position: absolute; height: 95%; right: 20px; border: none; background-color: white; color: grey}
+#searchBar > button:hover { color: red}
+#searchBar > button:focus { color: grey; outline: none;}
 
 
 #map-container { width: 100%; height: 50vh; padding: 0; margin: 0}
