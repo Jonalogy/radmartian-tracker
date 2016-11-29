@@ -6,9 +6,9 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 .navBar-item { display: inline-block; padding: 0; margin: 0}
 #searchBar-holder { height: inherit; padding-top: 1px; padding-bottom: 1px}
 #searchBar { height: 100%; width: 40vw; background-color: white; padding-left: 20px; padding-right:20px; border-radius: 5vh; position:relative;}
-#searchBar > input { position: absolute; height: 95%; width: 35vw; padding: 0; border: none; font-size: 1em;}
+#searchBar > input { position: absolute; top:1px; height: 95%; width: 35vw; padding: 0; border: none; font-size: 1em;}
 #searchBar > input:focus { outline: none;}
-#searchBar > button { position: absolute; height: 95%; right: 20px; border: none; background-color: white; color: grey}
+#searchBar > button { position: absolute; top:1px; height: 95%; right: 20px; border: none; background-color: white; color: grey; }
 #searchBar > button:hover { color: red}
 #searchBar > button:focus { color: grey; outline: none;}
 
