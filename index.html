@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://use.fontawesome.com/6ae0f2156f.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <title>RadMartian Tracker</title>
   </head>
   <body>
+    <div id="navBar">
+      <div class="navBar-item" id="logo"> <img id="redmart-logo" src="images/redmart_logo_cropped.png" alt=""> </div>
 
-    <div id="container">
-      <div id="map"></div>
+      <div class="navBar-item" id="searchBar-holder">
+        <div class="navBar-item" id="searchBar">
+          <input class="navBar-item" type="text" name="productSearch" placeholder="Search for a product or brand">
+          <button id="search-btn" type="button" name="button"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+        </div>
+      </div>
+
     </div>
+    <div id="navBar-spacer"></div>
+
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
 
     <script type="text/javascript" src="map.js"></script>
     <script async defer

@@ -17,7 +17,7 @@ function initMap(){
 
   // Defining RadMartian's marker
   var radMark_img = {
-    url: "images/redmart-bskt(1).png",
+    url: "images/redmart-bskt.png",
     size: new google.maps.Size(100, 100),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 0)
