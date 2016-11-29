@@ -10,8 +10,6 @@ var tracker_map;
 var radMark, clientMark;
 var bounds;
 
-var i = 0;
-
 //----Callback InitMap()
 function initMap(){
   tracker_map = new google.maps.Map(document.getElementById('map'), mapStart);
@@ -45,8 +43,6 @@ function initMap(){
 setInterval(getVehCoords, 1000) //Polling taxi data
 function getVehCoords(){
 
-  i++;
-
   var d = (new Date()).toISOString();
   var iso_date = d.substring(0 , 19)
 
@@ -59,7 +55,7 @@ function getVehCoords(){
       method: "GET",
       headers: { 'api-key': 'ezrYi8fQCFNhMc21SdHdcqqhzSApjgGP'}
     }).done(function(data){
-      var taxi = data.features[0].geometry.coordinates[i];
+      var taxi = data.features[0].geometry.coordinates[50];
       taxiLatLng = { lat: taxi[1], lng: taxi[0] }
       console.log("RadMartian at: ", taxiLatLng);
       change_pos(taxiLatLng)
