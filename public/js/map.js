@@ -2,10 +2,13 @@
 var mapStart = { center: { lat: 1.3521, lng: 103.8189 }, zoom: 13 };
 var radmart = { lat: 1.312623, lng: 103.7225139 }
 var changiAirport = { lat: 1.3644202, lng: 103.9915308 }
-var clientCoords = { lat: 1.3468548, lng: 103.7709016 }
+
+var customerName = $("#customer").text()
+var clientCoords = { lat: parseFloat($("#lat").text()), lng: parseFloat($("#lng").text()), }
 
 var taxiLatLng = radmart;
-var tracker_map;
+var tracker_map, geocoder;
+
 var radMark, clientMark;
 var bounds;
 
@@ -13,6 +16,8 @@ var bounds;
 function initMap(){
   tracker_map = new google.maps.Map(document.getElementById('map'), mapStart);
   bounds = new google.maps.LatLngBounds();
+  geocoder = new google.maps.Geocoder;
+
 
   // Defining RadMartian's marker
   var radMark_img = {
@@ -32,7 +37,7 @@ function initMap(){
   clientMark = new google.maps.Marker({
     position: clientCoords,
     map: tracker_map,
-    title: 'Your Address'
+    title: customerName
   });
 
   getVehCoords();
@@ -54,6 +59,7 @@ function getVehCoords(){
       method: "GET",
       headers: { 'api-key': 'ezrYi8fQCFNhMc21SdHdcqqhzSApjgGP'}
     }).done(function(data){
+      console.log('data', data.features[0].geometry)
       var nth_taxi = $('#taxi').text();
       var taxi = data.features[0].geometry.coordinates[nth_taxi];
       taxiLatLng = { lat: taxi[1], lng: taxi[0] }
@@ -62,8 +68,8 @@ function getVehCoords(){
     })
   }
   function change_pos(taxiLatLng) {
-    var LatLong = new google.maps.LatLng(taxiLatLng.lat, taxiLatLng.lng);
-    radMark.setPosition(LatLong);
+    var latLng = new google.maps.LatLng(taxiLatLng.lat, taxiLatLng.lng);
+    radMark.setPosition(latLng);
 
     //Resetting bounds as RedMartian's position is updated
     bounds = new google.maps.LatLngBounds()
@@ -72,9 +78,23 @@ function getVehCoords(){
     tracker_map.fitBounds(bounds)
     var centerBounds = (tracker_map.getBounds()).getCenter()
     tracker_map.setCenter(centerBounds);
+
+    geocoder.geocode({'location': latLng}, function(results, status) {
+    if (status === 'OK') {
+      if (results[1]) {
+        console.log(results)
+        $("#radLocation").text(results[1].address_components[0].long_name)
+
+      } else {
+        window.alert("Hmm, we're looking for our redmartian");
+      }
+    } else {
+      window.alert('Uhoh, error: ' + status);
+    }
+  });
+
   }
 }//END function getVehCoords
-
 
 //----Event Listeners
 

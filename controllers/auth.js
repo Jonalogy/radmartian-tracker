@@ -4,12 +4,11 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 var router = express.Router();
 var db = require("../models");
 
-
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/main',
   failureRedirect: '/',
   failureFlash: 'Invalid username and/or password',
-  successFlash: 'You have logged in'
+  // successFlash: 'You have logged in'
 }));
 
 router.get('/logout', function(req, res) {

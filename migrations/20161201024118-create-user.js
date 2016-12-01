@@ -20,6 +20,12 @@ module.exports = {
       taxi: {
         type: Sequelize.INTEGER
       },
+      lat: {
+        type: Sequelize.DECIMAL
+      },
+      lng: {
+        type: Sequelize.DECIMAL
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

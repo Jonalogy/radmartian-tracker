@@ -1,10 +1,24 @@
 <% include ../../views/partials/header.ejs %>
 <% include ../../views/partials/navBar.ejs %>
+    <div id="greeting">
+      Hi <span id="greet-name"><%= currentUser.name %></span>, RadMart delivery is on its way!
+    </div>
+
     <div id="map-container">
       <div id="map"></div>
     </div>
 
-    Taxi no. <span id="taxi"><%=taxi%></span>
+    <div id="info">
+      Taxi no. <span id="taxi"><%=taxi%></span>
+      customer: <span id="customer"><%=currentUser.name%></span>
+      lat: <span id="lat"><%=currentUser.lat%></span>
+      lng: <span id="lng"><%=currentUser.lng%></span>
+    </div>
+
+    <div id="radInfo">
+      Our RadMartian is currently around <span id="radLocation"></span>
+    </div>
+
 
     <script type="text/javascript" src="../js/map.js"></script>
     <script async defer

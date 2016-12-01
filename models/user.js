@@ -16,9 +16,10 @@ module.exports = function(sequelize, DataTypes) {
       validate: { len: { args: [8, 99], msg: 'Password must be between 8 and 99 characters' } } },
     taxi: {
       type: DataTypes.INTEGER,
-      validate: { isInt: true, max: 9999, min: 0, msg: 'Taxi number must be a valid integer ranging from 0 ~ 9999' }
+      validate: { isInt: true, max: 9999, min: 0, msg: 'Taxi number must be a valid integer ranging from 0 ~ 9999' } },
+    lat: { type: DataTypes.DECIMAL },
+    lng: { type: DataTypes.DECIMAL }
 
-    }
    } ,
    {
       hooks: { beforeCreate: function(createdUser, options, cb) {

@@ -35,7 +35,6 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
     next();
   });
 
-
 //Listening Port
   app.listen(process.env.PORT || 4200)
 
@@ -51,9 +50,6 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
 
 //Landing Page
   app.get('/main',isLoggedIn,function(req,res){
-    console.log(">>>Console.log checking  /main =>", req.user.taxi)
     res.locals.taxi = req.user.taxi
-    console.log( "res.locals = ", res.locals.currentUser)
-
     res.render('../views/main/main.ejs')
   })
