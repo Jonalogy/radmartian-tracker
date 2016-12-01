@@ -1,7 +1,6 @@
 {
   "name": "redmart_tracker",
   "version": "1.0.0",
-  "description": "",
   "main": "map.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,14 @@
   "dependencies": {
     "cors": "^2.8.1",
     "express": "^4.14.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonalogy/redmartian-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jonalogy/redmartian-tracker/issues"
+  },
+  "homepage": "https://github.com/Jonalogy/redmartian-tracker#readme",
+  "description": ""
 }

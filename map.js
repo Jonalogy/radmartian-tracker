@@ -1,4 +1,3 @@
-
 // Starting coordinates;
 var mapStart = { center: { lat: 1.3521, lng: 103.8189 }, zoom: 13 };
 var redmart = { lat: 1.312623, lng: 103.7225139 }
@@ -15,7 +14,7 @@ function initMap(){
   tracker_map = new google.maps.Map(document.getElementById('map'), mapStart);
   bounds = new google.maps.LatLngBounds();
 
-  // Defining RadMartian's marker
+  // Defining RedMartian's marker
   var radMark_img = {
     url: "images/redmart-bskt.png",
     size: new google.maps.Size(100, 100),
@@ -25,7 +24,7 @@ function initMap(){
   radMark = new google.maps.Marker({
     position: taxiLatLng,
     map: tracker_map,
-    title: 'RadMartian',
+    title: 'RedMartian',
     icon: radMark_img,
   });
 
@@ -40,7 +39,7 @@ function initMap(){
 }
 
 //----Updating of RedMartian's location
-setInterval(getVehCoords, 1000) //Polling taxi data
+setInterval(getVehCoords, 6000) //Polling taxi data at every 6 seconds
 function getVehCoords(){
 
   var d = (new Date()).toISOString();
@@ -57,7 +56,7 @@ function getVehCoords(){
     }).done(function(data){
       var taxi = data.features[0].geometry.coordinates[50];
       taxiLatLng = { lat: taxi[1], lng: taxi[0] }
-      console.log("RadMartian at: ", taxiLatLng);
+      console.log("RedMartian at: ", taxiLatLng);
       change_pos(taxiLatLng)
     })
   }
