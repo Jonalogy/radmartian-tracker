@@ -5,7 +5,7 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #card-holder{ width: 68%; display: table; margin: auto;}
 .card{ width: 100%; margin-top: 15px; padding: 10px; font-family: 'Source Sans Pro', sans-serif; background-color: white; font-size: 1.2em; box-shadow: 0px 10px 20px #888888; display: table;}
 .card > p >span { color: #EC243B; font-size: 1.2em}
-#tech-card-title { display: table-cell; text-align: right; padding-right: 10px; border-right: 1px solid grey; vertical-align: middle;}
+#tech-card-title { display: table-cell; text-align: center; padding-right: 10px; border-right: 1px solid grey; vertical-align: middle;}
 #demo > ol { text-align: center; list-style-type: none; }
 #tech-card-list { display: table-cell; font-size: 1.5em; }
 #tech-card-list > ul  { text-align: left; list-style-type: none; font-size: 1em;}
