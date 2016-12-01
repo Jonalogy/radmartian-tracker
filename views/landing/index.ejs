@@ -3,7 +3,47 @@
 <div class="contain-view loginClose">
 <% include ../../views/partials/navBar.ejs %>
 
-  <h1>Landing Page</h1>
+<div id="grid">
+  <div id="card-holder">
+    <div class="card">
+      <h1>Hello World, I'm Jonathan!</h1>
+
+      <p>This project of mine serves both as a minor suggestion for <span>RedMart</span> and also a practice for myself while exploration with Google Maps API real time location tracking </p>
+
+      <p>On 28-Dec-16, I realised <span>RedMart</span> had yet to implement any delivery tracking for customers so I thought it would be fun if customers can view where their assigned delivery <span>RedMartian</span> would be during their chosen delivery time slot.</p>
+
+    </div>
+
+    <div class="card">
+      <div id="tech-card-title">
+        <h2>Technologies Implemented</h2>
+      </div>
+      <div id="tech-card-list">
+        <ul>
+          <li>HTML, CSS, jQuery</li>
+          <li>Node.JS</li>
+          <li>Sequelize + PostgreSQL</li>
+          <li>Google Maps API</li>
+          <li><a href="https://data.gov.sg/dataset/taxi-availability">Taxi Availability API from Data.gov.sg</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" id="demo" >
+      <p>Real time data is drawn from taxi-availability API, which returns only lat/lng coordinates of unhired Taxis in Singapore. The coordinates are arranged from west to east. Once a taxi is hired, its coordinates are untracked from the API.</p>
+
+      <p>
+        For demonstration purposes 2 demo accounts are available for this project: <br>
+        Tom (<strong>tom@email.com</strong>) &amp; Mika (<strong>mika@email.com</strong>). <br>
+        Both their passwords are <strong>12345678</strong>.
+      </p>
+
+      <p> I randomly chose the 350th and 1000th coordinates from the array and assigned to Tom and Mika respectively.</p>
+
+      <p>Click on <span>Login</span> for a preview. Lastly, only the search bar and the login button works. Thank you for your time! :)</p>
+    </div>
+
+
+</div>
 
 </div>
 <script type="text/javascript" src="js/landing.js"> </script>

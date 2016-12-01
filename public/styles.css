@@ -1,5 +1,15 @@
 html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; }
 
+#grid { width: 100%; text-align: center;}
+.grid-spacer { width: 15%; height: 100px; display: inline-block; border: 1px black dotted}
+#card-holder{ width: 68%; display: table; margin: auto;}
+.card{ width: 100%; margin-top: 15px; padding: 10px; font-family: 'Source Sans Pro', sans-serif; background-color: white; font-size: 1.2em; box-shadow: 0px 10px 20px #888888; display: table;}
+.card > p >span { color: #EC243B; font-size: 1.2em}
+#tech-card-title { display: table-cell; text-align: right; padding-right: 10px; border-right: 1px solid grey; vertical-align: middle;}
+#demo > ol { text-align: center; list-style-type: none; }
+#tech-card-list { display: table-cell; font-size: 1.5em; }
+#tech-card-list > ul  { text-align: left; list-style-type: none; font-size: 1em;}
+
 .contain-view { background-color: #ECF0F1; height: 100vh; }
 
 /*#navBar-spacer {height: 2vh; z-index: -1}*/
@@ -13,7 +23,7 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #searchBar > input { display:table-cell;  height: 100%; width: 95%; padding: 0; border: none; font-size: 1em;}
 #searchBar > input:focus { outline: none;}
 #searchBar > button { display: table-cell; height: 95%; width: 5%; border: none; padding: none; margin: none; background-color: white; color: grey; }
-#searchBar > button:hover { color: red}
+#searchBar > button:hover { color: red }
 #searchBar > button:focus { color: grey; outline: none;}
 
 #navBar-butts { display: table-cell; width:30%; vertical-align: middle; padding: 0; margin: 0;}
@@ -34,6 +44,6 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #map{ height: 100%; width: 100%; }
 #info { display:none }
 
-#radInfo { text-align: center; font-family: 'Source Sans Pro'; color: #7E7E7E; background-color: inherit;; font-size: 3em; padding: 0; margin: 0;}
+#radInfo { text-align: center; font-family: 'Source Sans Pro'; color: #7E7E7E; background-color: inherit; font-size: 3em; padding: 0; margin: 0;}
 #radInfo > span { color: #EC243B;}
 #van-img { height: 1.5em; vertical-align: middle;}
