@@ -3,7 +3,12 @@ $(document).ready(function(){
 
   $("#login-btn").click(function(){
     console.log("Clicked Login");
-    window.location="auth/login";
+    $('.contain-view').toggleClass("loginOpen")
+    // window.location="auth/login";
+  })
+  $("#loginClose ").click(function(){
+    console.log("Clicked Login");
+    $('.contain-view').removeClass("loginOpen")
   })
 
 })
