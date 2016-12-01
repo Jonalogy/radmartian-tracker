@@ -37,7 +37,7 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
 
 
 //Listening Port
-  app.listen(4200, console.log("Localhost up and running"))
+  app.listen(process.env.PORT || 4200)
 
 //Paths & Controllers
   var path = require('path'); // In Terminal run: npm install --save path
