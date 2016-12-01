@@ -10,7 +10,7 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #tech-card-list { display: table-cell; font-size: 1.5em; }
 #tech-card-list > ul  { text-align: left; list-style-type: none; font-size: 1em;}
 
-.contain-view { background-color: #ECF0F1; height: 100vh; }
+.contain-view { background-color: #ECF0F1; height: 100%; }
 
 /*#navBar-spacer {height: 2vh; z-index: -1}*/
 #navBar { background-color: #EE4054; height: 50px; width: 100%; display: table;}
