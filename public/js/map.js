@@ -83,7 +83,7 @@ function getVehCoords(){
     if (status === 'OK') {
       if (results[1]) {
         console.log(results)
-        $("#radLocation").text(results[1].address_components[0].long_name)
+        $("#radLocation").text(results[1].formatted_address)
 
       } else {
         window.alert("Hmm, we're looking for our redmartian");

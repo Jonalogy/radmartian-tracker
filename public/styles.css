@@ -23,15 +23,17 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 .navBar-btn:nth-child(3) {width: 19% }
 .navBar-btn:nth-child(4) {width: 19% }
 #navBar-butts > div > button { height: 50px; width: 100%; background-color: #EE4054; padding: 0; color:white; border: 0; outline: none; font-family: 'Source Sans Pro'; font-size: 1em; }
-/*#navBar-butts > div > button:hover { background-color: #EC243B; }*/
 #nav-help>button:hover, #nav-cart>button:hover, #nav-signup>button:hover { background-color: #EC243B; cursor: not-allowed; }
 #nav-login>button:hover { background-color: #EC243B; cursor: pointer; }
 #nav-logout>button:hover { background-color: #EC243B; cursor: pointer; }
 
-#greeting { text-align: center; font-family: 'Source Sans Pro'; color: white; background-color: rgba(10,10,10,0.6); font-size: 3em; }
+#greeting { text-align: center; font-family: 'Source Sans Pro'; color: white; background-color: rgba(100,100,100,0.6); font-size: 3em; }
 #greeting > span { color: #EE4054; }
 
-
-#map-container { width: 100%; height: 50vh; padding: 0; margin: 0}
+#map-container { width: 100%; height: 65vh; padding: 0; margin: 0}
 #map{ height: 100%; width: 100%; }
 #info { display:none }
+
+#radInfo { text-align: center; font-family: 'Source Sans Pro'; color: #7E7E7E; background-color: inherit;; font-size: 3em; padding: 0; margin: 0;}
+#radInfo > span { color: #EC243B;}
+#van-img { height: 1.5em; vertical-align: middle;}

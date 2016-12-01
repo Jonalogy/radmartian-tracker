@@ -8,17 +8,20 @@
       <div id="map"></div>
     </div>
 
+    <div id="radInfo">
+      Our RadMartian <img id= "van-img" src="images/delivery-truck.svg" > is currently around <br> <span class="radInfo-inner" id="radLocation"></span>
+    </div>
+
+    <!-- <div id="van">
+      <img id= "van-img" src="images/delivery-truck.svg" >
+    </div> -->
+
     <div id="info">
       Taxi no. <span id="taxi"><%=taxi%></span>
       customer: <span id="customer"><%=currentUser.name%></span>
       lat: <span id="lat"><%=currentUser.lat%></span>
       lng: <span id="lng"><%=currentUser.lng%></span>
     </div>
-
-    <div id="radInfo">
-      Our RadMartian is currently around <span id="radLocation"></span>
-    </div>
-
 
     <script type="text/javascript" src="../js/map.js"></script>
     <script async defer
