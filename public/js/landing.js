@@ -11,4 +11,8 @@ $(document).ready(function(){
     $('.contain-view').removeClass("loginOpen")
   })
 
+  $("#innerLogin-btn").click(function(){
+    console.log("Attempting to Login")
+  })
+
 })

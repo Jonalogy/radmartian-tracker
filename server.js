@@ -20,6 +20,7 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
   app.use(flash());
 
 //Passport Configuration
+  console.log("test");
   app.use(passport.initialize());
   app.use(passport.session());
 
@@ -33,6 +34,7 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
     res.locals.currentUser = req.user;
     next();
   });
+
 
 //Listening Port
   app.listen(4200, console.log("Localhost up and running"))
@@ -49,5 +51,9 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
 
 //Landing Page
   app.get('/main',isLoggedIn,function(req,res){
+    console.log(">>>Console.log checking  /main =>", req.user.taxi)
+    res.locals.taxi = req.user.taxi
+    console.log( "res.locals = ", res.locals.currentUser)
+
     res.render('../views/main/main.ejs')
   })

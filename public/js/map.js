@@ -1,10 +1,10 @@
 // Starting coordinates;
 var mapStart = { center: { lat: 1.3521, lng: 103.8189 }, zoom: 13 };
-var redmart = { lat: 1.312623, lng: 103.7225139 }
+var radmart = { lat: 1.312623, lng: 103.7225139 }
 var changiAirport = { lat: 1.3644202, lng: 103.9915308 }
 var clientCoords = { lat: 1.3468548, lng: 103.7709016 }
 
-var taxiLatLng = redmart;
+var taxiLatLng = radmart;
 var tracker_map;
 var radMark, clientMark;
 var bounds;
@@ -14,7 +14,7 @@ function initMap(){
   tracker_map = new google.maps.Map(document.getElementById('map'), mapStart);
   bounds = new google.maps.LatLngBounds();
 
-  // Defining RedMartian's marker
+  // Defining RadMartian's marker
   var radMark_img = {
     url: "images/redmart-bskt.png",
     size: new google.maps.Size(100, 100),
@@ -24,7 +24,7 @@ function initMap(){
   radMark = new google.maps.Marker({
     position: taxiLatLng,
     map: tracker_map,
-    title: 'RedMartian',
+    title: 'RadMartian',
     icon: radMark_img,
   });
 
@@ -54,9 +54,10 @@ function getVehCoords(){
       method: "GET",
       headers: { 'api-key': 'ezrYi8fQCFNhMc21SdHdcqqhzSApjgGP'}
     }).done(function(data){
-      var taxi = data.features[0].geometry.coordinates[50];
+      var nth_taxi = $('#taxi').text();
+      var taxi = data.features[0].geometry.coordinates[nth_taxi];
       taxiLatLng = { lat: taxi[1], lng: taxi[0] }
-      console.log("RedMartian at: ", taxiLatLng);
+      console.log("RadMartian at: ", taxiLatLng);
       change_pos(taxiLatLng)
     })
   }
@@ -73,3 +74,11 @@ function getVehCoords(){
     tracker_map.setCenter(centerBounds);
   }
 }//END function getVehCoords
+
+
+//----Event Listeners
+
+$('#nav-logout').click(function(){
+  console.log("Attempting to logout");
+  window.location = "auth/logout"
+})

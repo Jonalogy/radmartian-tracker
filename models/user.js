@@ -33,7 +33,11 @@ module.exports = function(sequelize, DataTypes) {
       instanceMethods: {
           validPassword: function(password) {
             console.log(">>>Console.log: Running instanceMethod- validPassword()");
+            console.log("Comparing user input password: ", password)
+            console.log("with bcrypt hash: ", this.password);
+            console.log("Comparison result: ", bcrypt.compareSync(password, this.password))
             return bcrypt.compareSync(password, this.password); // return if the password matches the hash
+
           },
           toJSON: function() {
             console.log(">>>Console.log: Running instanceMethod- toJSON()");

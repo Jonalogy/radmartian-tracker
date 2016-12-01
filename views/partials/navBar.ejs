@@ -19,13 +19,19 @@
       <div class="navBar-btn" id="nav-signup">
         <button type="button" name="signup">Sign up</button>
       </div>
+      <% if(currentUser === undefined){ %>
       <div class="navBar-btn" id="nav-login">
         <button type="button" name="login" id="login-btn">Log in</button>
       </div>
+      <% } else{ %>
+      <div class="navBar-btn" id="nav-logout">
+        <button type="button" name="logout" id="logout-btn">Log out</button>
+      </div>
+      <% } %>
+
     </div>
-
-
   </div>
+
   <div id="navBar-spacer"></div>
   <!-- <%- JSON.stringify(currentUser) %> -->
   <% include alerts %>

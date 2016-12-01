@@ -7,7 +7,9 @@ var db = require('../models');
  * user to an identifier (id)
  */
 passport.serializeUser(function(user, cb) {
-  console.log('passport.serializeUser');
+  console.log('>>>Console.log: Running passport.serializeUser()');
+  // console.log(">>>User = ", user);
+  console.log(">>>User.id = ", user.id);
   cb(null, user.id);
 });
 
@@ -16,7 +18,7 @@ passport.serializeUser(function(user, cb) {
  * and looking it up in the database
  */
 passport.deserializeUser(function(id, cb) {
-  console.log('passport.deserializeUser');
+  console.log('>>>Console.log: Running passport.deserializeUser()');
   db.user.findById(id).then(function(user) {
     cb(null, user);
   }).catch(cb);
@@ -47,7 +49,7 @@ passport.use(
   usernameField: 'email',
   passwordField: 'password'
   }, function(email, password, cb) {
-    console.log('passport.use')
+    console.log('>>>Console.log: Running passport.use()')
   db.user.find({
     where: { email: email }
   }).then(function(user) {

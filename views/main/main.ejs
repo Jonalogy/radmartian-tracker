@@ -1,13 +1,14 @@
-
-  <% include ../../views/partials/header.ejs %>
-
+<% include ../../views/partials/header.ejs %>
+<% include ../../views/partials/navBar.ejs %>
     <div id="map-container">
       <div id="map"></div>
     </div>
 
-    <script type="text/javascript" src="../landing/map.js"></script>
+    Taxi no. <span id="taxi"><%=taxi%></span>
+
+    <script type="text/javascript" src="../js/map.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmgmOAXzCx9nm0i5eWuDkUnZch8GLbXCg&v=3&callback=initMap">
     </script>
 
-  <% include ../../views/partials/footer.ejs %>
+<% include ../../views/partials/footer.ejs %>
