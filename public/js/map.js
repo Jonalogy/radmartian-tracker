@@ -44,7 +44,7 @@ function initMap(){
 }
 
 //----Updating of RedMartian's location
-setInterval(getVehCoords, 6000) //Polling taxi data at every 6 seconds
+setInterval(getVehCoords, 10000) //Polling taxi data at every 6 seconds
 function getVehCoords(){
 
   var d = (new Date()).toISOString();
