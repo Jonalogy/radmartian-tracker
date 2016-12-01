@@ -1,0 +1,34 @@
+html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; background-color: #ECF0F1; }
+
+#navBar-spacer {height: 8vh; z-index: -1}
+#navBar { background-color: #EE4054; height: 50px; width: 100%; position: fixed; display: table;}
+
+#logo {display: table-cell; vertical-align: middle; text-align: center; width: 10%; font-family: 'Alef', sans-serif; color: white; font-size: 2em; letter-spacing: -3px; }
+.navBar-item { padding: 0; margin: 0}
+
+#searchBar-holder { display: table-cell; width: 60%; padding-top: 4px; padding-bottom: 4px; }
+#searchBar { height: 100%; width: 90%; background-color: white; padding-left: 20px; padding-right:20px; border-radius: 54px; display: table; }
+#searchBar > input { display:table-cell;  height: 100%; width: 95%; padding: 0; border: none; font-size: 1em;}
+#searchBar > input:focus { outline: none;}
+#searchBar > button { display: table-cell; height: 95%; width: 5%; border: none; padding: none; margin: none; background-color: white; color: grey; }
+#searchBar > button:hover { color: red}
+#searchBar > button:focus { color: grey; outline: none;}
+
+#navBar-butts { display: table-cell; width:30%; vertical-align: middle; padding: 0; margin: 0;}
+.navBar-btn { display: inline-block; width: auto; padding: 0; margin: 0; border-left: 1px #EC243B solid }
+.navBar-btn:nth-child(1) {width: 29% }
+.navBar-btn:nth-child(2) {width: 29% }
+.navBar-btn:nth-child(3) {width: 19% }
+.navBar-btn:nth-child(4) {width: 19% }
+#navBar-butts > div > button { height: 50px; width: 100%; background-color: #EE4054; padding: 0; color:white; border: 0; outline: none; font-family: 'Source Sans Pro'; font-size: 1em; }
+/*#navBar-butts > div > button:hover { background-color: #EC243B; }*/
+#nav-help>button:hover, #nav-cart>button:hover, #nav-signup>button:hover { background-color: #EC243B; cursor: not-allowed; }
+#nav-login>button:hover { background-color: #EC243B; cursor: pointer; }
+
+/*#nav-login { display: table-cell; position: relative; background-color: inherit; text-align: center; border-left: 1px #EC243B solid; }
+#nav-login > button { position: absolute; height: 100%; left: 0; background-color: #EE4054; color:white; border: 0; outline: none; font-family: 'Source Sans Pro'; font-size: 1em;}
+#nav-login > button:hover { background-color: #EC243B; cursor: pointer; }*/
+
+
+#map-container { width: 100%; height: 50vh; padding: 0; margin: 0}
+#map{ height: 100%; width: 100%; }

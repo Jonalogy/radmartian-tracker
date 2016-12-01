@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/6ae0f2156f.js"></script>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alef:700" rel="stylesheet">
+  <title>RedMartian Tracker</title>
+</head>
+<body>
+  <div id="navBar">
+    <div class="navBar-item" id="logo">radmart</div>
+
+    <div class="navBar-item" id="searchBar-holder">
+      <div class="navBar-item" id="searchBar">
+        <input class="navBar-item" type="text" name="productSearch" placeholder="Search for a product or brand">
+        <button id="search-btn" type="button" name="button"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div class="navBar-item" id="navBar-butts">
+      <div class="navBar-btn" id="nav-help">
+        <button type="button" name="help">Need Help?</button>
+      </div>
+      <div class="navBar-btn" id="nav-cart">
+        <button type="button" name="cart"> <i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i> Cart</button>
+      </div>
+      <div class="navBar-btn" id="nav-signup">
+        <button type="button" name="signup">Sign up</button>
+      </div>
+      <div class="navBar-btn" id="nav-login">
+        <button type="button" name="login" id="login-btn">Log in</button>
+      </div>
+    </div>
+
+
+  </div>
+  <div id="navBar-spacer"></div>
+  <!-- <%- JSON.stringify(currentUser) %> -->
+  <% include alerts %>
