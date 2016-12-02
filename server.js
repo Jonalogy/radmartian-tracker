@@ -20,7 +20,7 @@ console.log(process.env.DEVELOPMENT_ENV_LOAD)
   app.use(flash());
 
 //Passport Configuration
-  console.log("test");
+  console.log("Applying Passport...");
   app.use(passport.initialize());
   app.use(passport.session());
 

@@ -1,5 +1,7 @@
 html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; }
+.contain-view { background-color: #ECF0F1; height: 100%; }
 
+/********** Landing Page **********/
 #grid { width: 100%; text-align: center;}
 .grid-spacer { width: 15%; height: 100px; display: inline-block; border: 1px black dotted}
 #card-holder{ width: 68%; display: table; margin: auto;}
@@ -10,12 +12,10 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #tech-card-list { display: table-cell; font-size: 1.5em; }
 #tech-card-list > ul  { text-align: left; list-style-type: none; font-size: 1em;}
 
-.contain-view { background-color: #ECF0F1; height: 100%; }
-
-/*#navBar-spacer {height: 2vh; z-index: -1}*/
+/********** NavBar **********/
 #navBar { background-color: #EE4054; height: 50px; width: 100%; display: table;}
 
-#logo {display: table-cell; vertical-align: middle; text-align: center; width: 10%; font-family: 'Alef', sans-serif; color: white; font-size: 2em; letter-spacing: -3px; }
+#logo {display: table-cell; vertical-align: middle; text-align: center; width: 120px; font-family: 'Alef', sans-serif; color: white; font-size: 2em; letter-spacing: -3px; padding: 0 10px 0 10px; }
 .navBar-item { padding: 0; margin: 0}
 
 #searchBar-holder { display: table-cell; width: 60%; padding-top: 4px; padding-bottom: 4px; }
@@ -23,7 +23,7 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #searchBar > input { display:table-cell;  height: 100%; width: 95%; padding: 0; border: none; font-size: 1em;}
 #searchBar > input:focus { outline: none;}
 #searchBar > button { display: table-cell; height: 95%; width: 5%; border: none; padding: none; margin: none; background-color: white; color: grey; }
-#searchBar > button:hover { color: red }
+#searchBar > button:hover { color: red; cursor: pointer }
 #searchBar > button:focus { color: grey; outline: none;}
 
 #navBar-butts { display: table-cell; width:30%; vertical-align: middle; padding: 0; margin: 0;}
@@ -37,6 +37,7 @@ html, body { padding: 0; margin: 0; font-family: 'Source Sans Pro', sans-serif; 
 #nav-login>button:hover { background-color: #EC243B; cursor: pointer; }
 #nav-logout>button:hover { background-color: #EC243B; cursor: pointer; }
 
+/********** Main Map Page **********/
 #greeting { text-align: center; font-family: 'Source Sans Pro'; color: white; background-color: rgba(100,100,100,0.6); font-size: 3em; }
 #greeting > span { color: #EE4054; }
 
